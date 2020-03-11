@@ -49,7 +49,7 @@ func getMedia(w http.ResponseWriter, r *http.Request) {
 		var info u.FileInfoMessage
 
 		name := file.Name()
-		isValidImageFile := strings.HasSuffix(name, ".jpg") || strings.HasSuffix(name, ".jpeg") || strings.HasSuffix(name, ".png")
+		isValidImageFile := strings.HasSuffix(name, ".jpg") || strings.HasSuffix(name, ".jpeg") || strings.HasSuffix(name, ".png") || strings.HasSuffix(name, ".docx") || strings.HasSuffix(name, ".xlsx")
 
 		if !isValidImageFile && !file.IsDir() {
 			continue
